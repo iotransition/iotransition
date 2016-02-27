@@ -22,16 +22,16 @@
   </head>
   <body>
     <h1>Photon servo control</h1>
-    <input id = "slider" input type="range" min="0" max="180" value="0" onchange="showValue(this.value)"/>
+    <input id = "slider" input type="range" min="0" max="180" value="0" onchange="showValue(this.value)" style="font-size:25px" />
    
   
     <span id="range">0</span>
     <br>
     <br>
-    <input type="button" value="On" onmousedown="showValue(180)" id="onoff">
+    <input type="button" value="On" onmousedown="showValue(180)" id="onoff" style="font-size:25px" >
     <br>
     <br>
-    <input type="button" value="Off" onmousedown="showValue(0)" id="onoff">
+    <input type="button" value="Off" onmousedown="showValue(0)" id="onoff" style="font-size:25px" >
     
     <script type="text/javascript">
     function showValue(newValue) {
