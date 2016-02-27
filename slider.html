@@ -11,11 +11,21 @@
   </head>
   <body>
     <h1>Photon servo control</h1>
-    <input type="range" min="0" max="180" value="0" onchange="showValue(this.value)"/>
+    <input id = "slider" input type="range" min="0" max="180" value="0" onchange="showValue(this.value)"/>
+   
+  
     <span id="range">0</span>
+    <br>
+    <br>
+    <input type="button" value="On" onmousedown="showValue(180)">
+    <br>
+    <br>
+    <input type="button" value="Off" onmousedown="showValue(0)">
+    
     <script type="text/javascript">
     function showValue(newValue) {
       document.getElementById("range").innerHTML=newValue;
+      slider.value = newValue;
       var request = new XMLHttpRequest();
       var dev_id = "2d002f000547343339373536";
       var access = "c4889b75e756973ef6bded5ffa32f5e590833e89";
