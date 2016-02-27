@@ -6,12 +6,18 @@
       max-width: 45em;
       padding: 0.8em;
       background: white;
+      text-align: center;
       
     }
-    button {
-         height:700px;
-         width:700px;
+    #onoff {
+         height:70px;
+         width:100px;
     }
+    #slider {
+         height:200px;
+         width:300px;
+    }
+          
     </style>
   </head>
   <body>
@@ -22,10 +28,10 @@
     <span id="range">0</span>
     <br>
     <br>
-    <input type="button" value="On" onmousedown="showValue(180)" size="180pt">
+    <input type="button" value="On" onmousedown="showValue(180)" id="onoff">
     <br>
     <br>
-    <input type="button" value="Off" onmousedown="showValue(0)">
+    <input type="button" value="Off" onmousedown="showValue(0)" id="onoff">
     
     <script type="text/javascript">
     function showValue(newValue) {
