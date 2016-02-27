@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <style>
+    body {
+      margin: 1em auto;
+      max-width: 45em;
+      padding: 0.8em;
+      background: white;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Photon servo control</h1>
+    <input type="range" min="0" max="180" value="0" onchange="showValue(this.value)"/>
+    <span id="range">0</span>
+    <script type="text/javascript">
+    function showValue(newValue) {
+      document.getElementById("range").innerHTML=newValue;
+      var request = new XMLHttpRequest();
+      var dev_id = "2d002f000547343339373536";
+      var access = "c4889b75e756973ef6bded5ffa32f5e590833e89";
+      var data = 'params='+newValue+'&access_token='+access;
+      var url = 'https://api.particle.io/v1/devices/'+dev_id+'/setpos/';
+      request.open('POST', url, true);
+      request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+      request.send(data);
+    }
+    </script>
+  </body>
+</html>
+
+
+
+<!--Servo serv;
+int pos = 0;
+
+void setup() {
+    serv.attach(D0);
+    Spark.function("setpos", setPos);
+    Spark.variable("getpos", &pos, INT);
+}
+
+void loop() {
+}
+
+int setPos(String pstn) {
+    pos = pstn.toInt();
+    serv.write(pos);
+    return pos;
+}-->
