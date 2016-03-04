@@ -18,23 +18,16 @@
     }
     </style>
     </head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <body>
-    <h1>IoTransition Switch Control</h1>
-    <input id = "slider" input type="range" min="0" max="180" value="0" onchange="showValue(this.value)" style="font-size:25px" />
+  
+    <body onload="showValue(175)">
+      
+    
+        
+    <h1>OFF</h1>
+    
+    <input id = "slider" input type="range" min="20" max="155" value="0" onchange="showValue(this.value)" style="font-size:25px" />
     <span id="range">0</span>
-    <br>
-    <br>
-    <input type="button" value="On" onmousedown="showValue(180)" id="onoff" style="font-size:60px" >
-    <br>
-    <br>
-    <input type="button" value="Off" onmousedown="showValue(0)" id="onoff" style="font-size:60px" >
-    <!--<br><br>
-    <button id="minusbutton" onclick="fineAdjust(-5)">&lArr; -5 &deg;</button>
-    <button id="plusbutton"  onclick="fineAdjust(+5)">+5 &deg; &rArr;</button>
-    <br><br>
-    <!--<P>Current Position: <span id="curPos"></span><br>
-    <input type="range" name="degBox" id="degBoxId" min="0" max="180" step="1" value="90" list="myData" onchange="showValue(this)">-->
+    
     <script type="text/javascript">
     function showValue(newValue) {
       document.getElementById("range").innerHTML=newValue;
